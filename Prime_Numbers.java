@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class prime
+class Prime_Numbers
 {
 	public static void main(String arg[])
 	{
