@@ -32,7 +32,7 @@ class bank
 	void deposit()
 	{
 		float amt;
-		System.out.println("Enter Amount You Want to Deposit : ");
+		System.out.println("Enter the Amount You Want to Deposit : ");
 		amt=KB.nextFloat();
 		balance=balance+amt;
 	}
@@ -41,7 +41,7 @@ class bank
 	void withdrawal()
 	{
 		float amt;
-		System.out.println("Enter Amount You Want to withdraw : ");
+		System.out.println("Enter the Amount You Want to withdraw : ");
 		amt=KB.nextFloat();
 		if(balance>=amt)
 		{ 
@@ -72,7 +72,7 @@ public class Bank
 		Scanner KB=new Scanner(System.in);
 		
 		//create initial accounts
-		System.out.print("How Many Customers You Want to Input : ");
+		System.out.print("Enter the Number of New Customers : ");
 		int n=KB.nextInt();
 		Bank  C[]=new Bank[n];
 		for(int i=0;i<n;i++)
