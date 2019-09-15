@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Bank
+class bank
 {
 	int accno;
 	String name;
@@ -65,7 +65,7 @@ class Bank
 	}
 }
 
-public class ExBank
+public class Bank
 {  
 	public static void main(String arg[])
 	{
