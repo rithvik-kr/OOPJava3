@@ -9,7 +9,6 @@ class bank
 
 	Scanner KB=new Scanner(System.in);
 	
-	//method to open an account
 	void openAccount()
 	{ 
 		System.out.print("Enter Account No: ");
@@ -22,13 +21,11 @@ class bank
 		balance=KB.nextFloat();
 	}
 
-	//method to display account details
 	void showAccount()
 	{ 
 		System.out.println(" Account No. : "+accno+"\n Name : "+name+"\n Phone No. : "+phno+"\n Balance : "+balance);
 	}
 
-	//method to deposit money
 	void deposit()
 	{
 		float amt;
@@ -37,7 +34,6 @@ class bank
 		balance=balance+amt;
 	}
 
-	//method to withdraw money
 	void withdrawal()
 	{
 		float amt;
@@ -53,7 +49,6 @@ class bank
 		}
 	}
 
-	//method to search an account number
 	boolean search(int acn)
 	{ 
 		if(accno==acn)
@@ -71,7 +66,6 @@ public class Bank
 	{
 		Scanner KB=new Scanner(System.in);
 		
-		//create initial accounts
 		System.out.print("Enter the Number of New Customers : ");
 		int n=KB.nextInt();
 		Bank  C[]=new Bank[n];
@@ -81,7 +75,6 @@ public class Bank
 			C[i].openAccount();
 		}
 		
-		//run loop until menu 5 is not pressed
 		int ch;
 		do
 		{
