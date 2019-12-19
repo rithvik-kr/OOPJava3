@@ -1,3 +1,4 @@
+  
 import java.util.Scanner;
 import java.util.*;
 
@@ -11,7 +12,7 @@ class string
 		int n=sc.nextInt();
 		System.out.println("Enter the Number of characters to be Extracted : ");
 		int m=sc.nextInt();
-		System.out.println("text.substring(n, n+m)");
+		System.out.println(text.substring(n, n+m));
 	}
 	
 	void occ(String text)
@@ -37,14 +38,15 @@ class string
 		}
 	}
 	
-	void replace(String text)
+	void rep(String text)
 	{
-		String[] token = text.split(" ");
+		//String[] token = text.split(" ");
 		System.out.println("Enter the Word you want to replace : ");
 		String txt=sc.next();
 		System.out.println("Enter the Word to Replace Wtih : ");
 		String t=sc.next();
-		StringBuilder sb=new StringBuilder();
+		System.out.println(text.replace(text.substring(2,4),t));
+		/*StringBuilder sb=new StringBuilder();
 		
 		for(int i=0; i<token.length; i++)
 		{
@@ -55,17 +57,19 @@ class string
 			sb.append(token[i]);
 			sb.append(" ");
 		}
-		System.out.println(sb.toString());
+		System.out.println(sb.toString());*/
+		
 	}
 	
 	void rearrange(String text)
 	{
 		char[] temp = text.toCharArray();
 		Arrays.sort(temp);
-		StringBuilder sb=new StringBuilder();
-		for(int i=0; i<temp.length; i++)
-		sb.append(temp[i]);
-		System.out.println("The Sorted String is : "+sb.toString());
+		//StringBuilder sb=new StringBuilder();
+		//for(int i=0; i<temp.length; i++)
+		//sb.append(temp[i]);
+		String t=new String(temp);
+		System.out.println("The Sorted String is : "+t);
 		
 	}
 	
@@ -85,9 +89,9 @@ class string
 	{
 		System.out.println("Enter the String to be Joined : ");
 		String t = sc.nextLine();
-		StringBuilder sb=new StringBuilder();
-		sb.append(text).append(" ").append(t);
-		System.out.println("The Concatenated String is : "+sb.toString());
+		//StringBuilder sb=new StringBuilder();
+		//sb.append(text).append(" ").append(t);
+		System.out.println("The Concatenated String is : "+text.concat(t));
 	}	
 
 
@@ -112,7 +116,7 @@ class string
 					s.occ(text);
 					break;
 				case 3:
-					s.replace(text);
+					s.rep(text);
 					break;
 				case 4:
 					s.rearrange(text);
